@@ -34,10 +34,20 @@
                     </tr>
                   </thead>
                   <tbody>
+                  {% for animal in animals %}
                     <tr>
-                        <td>cristian</td>
+                        <td>{{ animal.name }}</td>
                         <td>azul</td>
                     </tr>
+                  {% else %}
+                  {% endfor %}
+                  {% for brain in brains %}
+                    <tr>
+                        <td>{{ brain.name }}</td>
+                        <td>azul</td>
+                    </tr>
+                  {% else %}
+                  {% endfor %}
                   </tbody>
               </table>
           </div>

@@ -7,6 +7,8 @@ class Animal:
     def get(cls):
         animals = [
             cls("aguila","blanco"),
-            cls("cristian","azul")
+            cls("cristian","azul"),
+            cls("perro","rojo"),
+            cls("gato","gris")
         ]
         return animals

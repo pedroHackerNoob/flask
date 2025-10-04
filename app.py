@@ -1,7 +1,9 @@
 #importa de un paquete llamado flask, una clase llamada Flask
 from flask import Flask, render_template
 
-#Estamos creando un objeto a partir del constructor de la clase 
+from ent.animal import Animal
+from ent.brainrot import BrainRot
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -10,7 +12,7 @@ def index():
 
 @app.route('/animals')
 def animals():
-    return render_template('animals.html')
+    return render_template('animals.html', animals = Animal.get(), brains = BrainRot.get() )
 
 if __name__ == '__main__':
     app.run()
