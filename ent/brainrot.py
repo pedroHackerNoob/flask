@@ -6,7 +6,13 @@ class BrainRot:
     def get(cls):
         brainrots = [
             cls("tralalero tralala","gold"),
-            cls("tung tung sahur","gold"),
-            cls("lirililarila","gold")
+            cls("tung tung sahur","diamond"),
+            cls("lirililarila","plate"),
+            cls("bombardiro", "gold"),
+            cls("tralalero tralala", "gold"),
+            cls("tung tung sahur", "diamond"),
+            cls("lirililarila", "plate"),
+            cls("bombardiro", "gold")
+
         ]
         return brainrots
