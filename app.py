@@ -17,10 +17,15 @@ def animals():
 
 @app.route('/sorteo', methods=['GET', 'POST'])
 def sorteo():
-    num1 = request.form.get('num1')
+    data = request.get_json()
+    num1 = int(data.get('num1'))
+    num2 = int(data.get('num2'))
+
     if request.method == 'POST':
-        print(num1)
-        return render_template('sorteo.html', body = num1)
+        print(num1," numeros ",num2)
+        sorteo = Sorteo(num1, num2)
+        resultado = sorteo.iniciarSorteo()
+        return render_template('sorteo.html', resultado = resultado)
     else:
         return render_template('sorteo.html')
 

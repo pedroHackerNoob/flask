@@ -1,14 +1,11 @@
 {#{%  include 'header.html' %}#}
     <main>
         <h1>Sorteo</h1>
-        { % if iniciarSorteo % }
-            <p>{{ ganaste }}</p>
-        { % if iniciarSorteo == False % }
+        { % if resultado == True % }
+            <p>ganaste</p>
+        { % if resultado == False % }
             <p>No hay ganador</p>
         { % endif % }
-        <form action="" method="post">
-            <input type="text" name="nombre" id="nombre">
-            <input type="submit" value="Enviar">
-        </form>
+        t type="submit" value="Enviar">
     </main>
 {% include 'footer.html' %}
