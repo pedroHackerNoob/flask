@@ -8,8 +8,8 @@ class Sorteo:
 
     def iniciarSorteo(self):
 
-        # res = random.randint(1, 100)
-        res = self.num1
+        res = random.randint(1, 100)
+        # res = self.num1
         print("resultado final: ",res)
 
         if res == self.num1 or res == self.num2:

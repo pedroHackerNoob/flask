@@ -1,11 +1,12 @@
 {#{%  include 'header.html' %}#}
     <main>
-        <h1>Sorteo</h1>
-        { % if resultado == True % }
-            <p>ganaste</p>
-        { % if resultado == False % }
-            <p>No hay ganador</p>
-        { % endif % }
-        t type="submit" value="Enviar">
-    </main>
+    <h1>Sorteo</h1>
+    {% if resultado == True %}
+        <p>¡Ganaste! 🎉</p>
+    {% elif resultado == False %}
+        <p>No hay ganador. 😔</p>
+    {% else %}
+        <p>El sorteo aún no se ha realizado.</p>
+    {% endif %}
+</main>
 {% include 'footer.html' %}
