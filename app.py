@@ -19,9 +19,15 @@ def animals():
 def sorteo():
 
     if request.method == 'POST':
-        data = request.get_json()
-        num1 = int(data.get('num1'))
-        num2 = int(data.get('num2'))
+        if request.form:
+            data = request.form
+            num1 = int(data.get('num1'))
+            num2 = int(data.get('num2'))
+        else:
+            data = request.get_json()
+            num1 = int(data.get('num1'))
+            num2 = int(data.get('num2'))
+
 
         print(num1," numeros ",num2)
         sorteo = Sorteo(num1, num2)
