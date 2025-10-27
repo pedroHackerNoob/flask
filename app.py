@@ -20,6 +20,7 @@ def sorteo():
     num1 = 69
     num2 = 96
     if request.method == 'POST':
+        print("POST")
         if request.form:
             data = request.form
             num1 = int(data.get('num1'))
@@ -30,13 +31,13 @@ def sorteo():
             num2 = int(data.get('num2'))
 
 
-        print(num1," numeros ",num2)
+        print(num1," numeros obtenidos ",num2)
         sorteo = Sorteo(num1, num2)
         resultado = sorteo.iniciarSorteo()
 
         return render_template('sorteo.html', resultado = resultado)
     else:
-        print(num1," numeros ",num2)
+        print("GET")
         return render_template('sorteo.html')
 
 if __name__ == '__main__':
