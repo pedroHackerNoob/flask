@@ -17,7 +17,8 @@ def animals():
 
 @app.route('/sorteo', methods=['GET', 'POST'])
 def sorteo():
-
+    num1 = 69
+    num2 = 96
     if request.method == 'POST':
         if request.form:
             data = request.form
@@ -35,8 +36,8 @@ def sorteo():
 
         return render_template('sorteo.html', resultado = resultado)
     else:
+        print(num1," numeros ",num2)
         return render_template('sorteo.html')
-
 
 if __name__ == '__main__':
     app.run()
