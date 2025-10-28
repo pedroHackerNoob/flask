@@ -39,6 +39,6 @@ def sorteo():
     else:
         print("GET")
         return render_template('sorteo.html')
-
+# test
 if __name__ == '__main__':
     app.run()
